@@ -190,6 +190,8 @@ const s = {
     boxShadow: 'var(--shadow-ambient)',
     overflow: 'hidden',
     position: 'relative',
+    minWidth: 0,
+    width: '100%',
   },
   tartanStrip: {
     position: 'absolute',
@@ -272,6 +274,8 @@ const s = {
     fontWeight: 600,
     color: 'var(--on-surface)',
     lineHeight: 1.35,
+    overflowWrap: 'break-word',
+    minWidth: 0,
   },
   nameDone: {
     color: 'var(--on-surface-muted)',

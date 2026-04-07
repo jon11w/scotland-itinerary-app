@@ -48,9 +48,12 @@ const s = {
     borderRadius: 'var(--radius-lg)',
     overflow: 'hidden',
     boxShadow: 'var(--shadow-ambient)',
+    minWidth: 0,
+    width: '100%',
   },
   header: {
     width: '100%',
+    minWidth: 0,
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'space-between',
@@ -64,6 +67,8 @@ const s = {
     display: 'flex',
     flexDirection: 'column',
     gap: 3,
+    minWidth: 0,
+    overflow: 'hidden',
   },
   dayLabel: {
     fontFamily: 'var(--font-body)',
@@ -106,11 +111,15 @@ const s = {
     background: 'var(--surface-lowest)',
     display: 'flex',
     flexDirection: 'column',
+    minWidth: 0,
+    width: '100%',
   },
   row: {
     display: 'flex',
     gap: 14,
     alignItems: 'flex-start',
+    minWidth: 0,
+    width: '100%',
   },
   cardWrapper: {
     flex: 1,

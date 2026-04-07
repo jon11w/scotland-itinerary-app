@@ -82,15 +82,19 @@ export default function ItineraryView({ onLogout }) {
 const s = {
   page: {
     minHeight: '100vh',
+    width: '100%',
+    maxWidth: '100vw',
     display: 'flex',
     flexDirection: 'column',
     background: 'var(--surface)',
+    overflowX: 'hidden',
   },
   header: {
     position: 'sticky',
     top: 0,
     zIndex: 100,
     overflow: 'hidden',
+    width: '100%',
   },
   headerBg: {
     position: 'absolute',
@@ -106,6 +110,7 @@ const s = {
     justifyContent: 'space-between',
     padding: '18px 22px 10px',
     gap: 12,
+    minWidth: 0,
   },
   eyebrow: {
     fontFamily: 'var(--font-body)',
@@ -176,12 +181,15 @@ const s = {
   main: {
     flex: 1,
     padding: '24px 16px 16px',
+    minWidth: 0,
+    width: '100%',
   },
   dayList: {
     display: 'flex',
     flexDirection: 'column',
     gap: 14,
     maxWidth: 640,
+    width: '100%',
     margin: '0 auto',
   },
   footer: {
