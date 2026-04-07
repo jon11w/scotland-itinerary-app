@@ -1,11 +1,41 @@
+import { useRef, useEffect } from 'react';
 import EventCard from './EventCard';
 
 export default function DaySection({ day, isActive, onClick, completedEvents, onToggleComplete }) {
   const completedCount = day.events.filter(e => completedEvents.has(e.id)).length;
   const allDone = completedCount === day.events.length;
 
+  const sectionRef  = useRef(null);
+  const eventRefs   = useRef({});
+
+  // When the accordion opens, scroll to the first uncompleted event.
+  // If that event is the first in the day (or all are done), scroll to the
+  // section header so the day name is also visible.
+  useEffect(() => {
+    if (!isActive) return;
+
+    const timer = setTimeout(() => {
+      const firstIncompleteIdx = day.events.findIndex(e => !completedEvents.has(e.id));
+      const scrollToSection    = firstIncompleteIdx <= 0; // first card or all done
+
+      const stickyHeader = document.querySelector('header');
+      const offset       = (stickyHeader ? stickyHeader.offsetHeight : 0) + 12;
+
+      const target = scrollToSection
+        ? sectionRef.current
+        : eventRefs.current[day.events[firstIncompleteIdx]?.id];
+
+      if (target) {
+        const top = target.getBoundingClientRect().top + window.scrollY - offset;
+        window.scrollTo({ top, behavior: 'smooth' });
+      }
+    }, 50); // slight delay so the accordion has rendered
+
+    return () => clearTimeout(timer);
+  }, [isActive]); // eslint-disable-line react-hooks/exhaustive-deps
+
   return (
-    <section style={s.section}>
+    <section ref={sectionRef} style={s.section}>
       <button style={s.header} onClick={onClick}>
         <div style={s.headerLeft}>
           <span style={s.dayLabel}>{day.dayLabel}</span>
@@ -26,7 +56,11 @@ export default function DaySection({ day, isActive, onClick, completedEvents, on
       {isActive && (
         <div style={s.body}>
           {day.events.map((event) => (
-            <div key={event.id} style={s.row}>
+            <div
+              key={event.id}
+              ref={el => { eventRefs.current[event.id] = el; }}
+              style={s.row}
+            >
               <div style={s.cardWrapper}>
                 <EventCard
                   event={event}
