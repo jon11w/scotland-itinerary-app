@@ -8,7 +8,7 @@
 export const TRIP_CONFIG = {
   title: "Outlander Scotland",
   subtitle: "York → Glasgow → Edinburgh",
-  coverImage: "https://images.unsplash.com/photo-1506377585622-bedcbb5a104b?w=800&q=80",
+  coverImage: "https://images.unsplash.com/photo-1467269204594-9661b134dd2b?w=800&q=80",
   destination: "Scotland, UK",
 };
 

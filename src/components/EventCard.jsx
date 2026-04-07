@@ -66,6 +66,7 @@ export default function EventCard({ event, isCompleted, onToggleComplete }) {
 
   return (
     <div style={{ ...s.card, ...(isCompleted ? s.cardDone : {}) }}>
+      <div style={s.tartanStrip} />
 
       {/* Type chip + time + checkbox row */}
       <div style={s.topRow}>
@@ -187,6 +188,30 @@ const s = {
     flexDirection: 'column',
     gap: 10,
     boxShadow: 'var(--shadow-ambient)',
+    overflow: 'hidden',
+    position: 'relative',
+  },
+  tartanStrip: {
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    right: 0,
+    height: 20,
+    backgroundColor: '#3d7a58',
+    backgroundImage: [
+      'repeating-linear-gradient(0deg,' +
+        'rgba(61,122,88,0.55) 0px,rgba(61,122,88,0.55) 18px,' +
+        'rgba(30,30,30,0.55) 18px,rgba(30,30,30,0.55) 24px,' +
+        'rgba(160,40,40,0.55) 24px,rgba(160,40,40,0.55) 28px,' +
+        'rgba(30,30,30,0.55) 28px,rgba(30,30,30,0.55) 34px,' +
+        'rgba(61,122,88,0.55) 34px,rgba(61,122,88,0.55) 52px)',
+      'repeating-linear-gradient(90deg,' +
+        '#3d7a58 0px,#3d7a58 18px,' +
+        '#1e1e1e 18px,#1e1e1e 24px,' +
+        '#a02828 24px,#a02828 28px,' +
+        '#1e1e1e 28px,#1e1e1e 34px,' +
+        '#3d7a58 34px,#3d7a58 52px)',
+    ].join(','),
   },
   cardDone: {
     background: 'rgba(22,53,38,0.03)',
@@ -197,6 +222,7 @@ const s = {
     alignItems: 'center',
     justifyContent: 'space-between',
     gap: 8,
+    paddingTop: 20,
   },
   chip: {
     fontFamily: 'var(--font-body)',
