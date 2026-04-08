@@ -26,22 +26,6 @@ async function fetchUnsplashImage(query) {
   return { url: `https://source.unsplash.com/800x400/?${encodeURIComponent(query)}`, credit: null, creditLink: null };
 }
 
-async function fetchAIDescription(event) {
-  try {
-    const response = await fetch('https://api.anthropic.com/v1/messages', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        model: 'claude-sonnet-4-20250514',
-        max_tokens: 1000,
-        messages: [{ role: 'user', content: `You are a friendly travel guide. Write a brief, enthusiastic 2-sentence description of "${event.name}" located at "${event.location}" for a city break itinerary. Focus on what makes it special and worth visiting. Be warm and conversational. Return ONLY the description text, no preamble.` }],
-      }),
-    });
-    if (!response.ok) throw new Error();
-    const data = await response.json();
-    return data.content?.[0]?.text || null;
-  } catch { return null; }
-}
 
 function openInMaps(location) {
   window.open(`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(location)}`, '_blank', 'noopener,noreferrer');
@@ -50,17 +34,17 @@ function openInMaps(location) {
 export default function EventCard({ event, isCompleted, onToggleComplete }) {
   const [expanded, setExpanded] = useState(false);
   const [image, setImage]       = useState(null);
-  const [description, setDesc]  = useState(null);
   const [loading, setLoading]   = useState(false);
   const [loaded, setLoaded]     = useState(false);
 
-  const tc = TYPE_CONFIG[event.type] || TYPE_CONFIG.sightseeing;
+  const tc          = TYPE_CONFIG[event.type] || TYPE_CONFIG.sightseeing;
+  const description = event.description || null;
 
   useEffect(() => {
     if (expanded && !loaded) {
       setLoading(true); setLoaded(true);
-      Promise.all([fetchUnsplashImage(event.locationQuery || event.name), fetchAIDescription(event)])
-        .then(([img, desc]) => { setImage(img); setDesc(desc); setLoading(false); });
+      fetchUnsplashImage(event.locationQuery || event.name)
+        .then(img => { setImage(img); setLoading(false); });
     }
   }, [expanded, loaded, event]);
 

@@ -26,14 +26,15 @@ export const itinerary = [
         location: "York, England",
         locationQuery: "York Minster medieval walls England Yorkshire",
         notes: "Allow ~4 hours drive including a coffee stop. Aim to arrive Glasgow around 4–4:30pm.",
+        description: "York was founded by the Romans as Eboracum in 71 AD and later became Jórvik, the capital of the Viking kingdom of Northumbria in the 9th century. Its medieval walls — among the most complete in England — still encircle a city centre largely unchanged since the 14th century, with the Minster standing on the same site where the Roman Emperor Constantine was proclaimed in 306 AD.",
       },
       {
         id: "evt-2",
         time: "16:00",
         type: "arrival",
         name: "Check in at Native Glasgow",
-        location: "Native Glasgow, 166 Bath St, Glasgow G2 4TG",
-        locationQuery: "Native Glasgow hotel Bath Street",
+        location: "Native Glasgow, 14 St Vincent Place, Glasgow G1 2DH",
+        locationQuery: "Native Glasgow hotel St Vincent Place",
         notes: "Central and stylish — great base for the evening. Drop bags and freshen up.",
         info: {
           openingHours: "24-hour reception",
@@ -51,6 +52,7 @@ export const itinerary = [
         location: "12 Ashton Ln, Glasgow G12 8SJ",
         locationQuery: "Ubiquitous Chip Glasgow Ashton Lane",
         notes: "A Glasgow institution — classic Scottish cooking in a stunning courtyard setting. Romantic vibe, great after a long drive. Book ahead.",
+        description: "Opened in 1971 by Ronnie Clydesdale as a deliberate challenge to Scotland's reputation for terrible food, The Ubiquitous Chip took its provocative name as a two-fingered salute to the nation's deep-fried diet. At a time when quality Scottish produce was routinely exported while locals ate poorly, Clydesdale was among the first to insist that native ingredients — venison, langoustines, haggis — deserved serious culinary treatment, helping spark a quiet revolution in Scottish cooking.",
         info: {
           openingHours: "Restaurant: Wed–Thu 5pm–12am, Fri–Sun 12pm–12am. Brasserie: daily 12pm–12am.",
           website: "https://www.ubiquitouschip.co.uk/",
@@ -89,6 +91,7 @@ export const itinerary = [
         location: "University of Glasgow, University Ave, Glasgow G12 8QQ",
         locationQuery: "University of Glasgow cloisters",
         notes: "Enter via the main gates and wander through the cloisters and quadrangles. Stood in for Harvard University in Outlander (Claire & Frank storyline). One of the most visually impressive stops — allow 30–45 mins.",
+        description: "Founded by Papal Bull in 1451, the University of Glasgow is the fourth oldest university in the English-speaking world. James Watt developed his improved steam engine here in the 1760s while working as the university's instrument maker — a breakthrough that would power the Industrial Revolution. The dramatic neo-Gothic main building was designed by George Gilbert Scott (architect of London's St Pancras station) and completed in 1870, replacing the original medieval college that had stood in the city centre for four centuries.",
         info: {
           openingHours: "Campus open daily. Guided tours: Tue–Sun 11:30am & 2pm (Apr–Oct); 2pm year-round.",
           admissionNote: "Self-guided: free. Guided tours: ticketed — book in advance.",
@@ -106,6 +109,7 @@ export const itinerary = [
         location: "Kelvingrove Park, Glasgow G3 6BY",
         locationQuery: "Kelvingrove Park Glasgow",
         notes: "Walk downhill from the university into the park. Used for Boston park scenes in Outlander. Relaxed green space — nice contrast after the architecture. 20–30 mins.",
+        description: "Kelvingrove Park was laid out in 1852 by Sir Joseph Paxton — the gardener turned engineer who designed the Crystal Palace for the Great Exhibition of 1851. The River Kelvin flowing through it gave the physicist Lord Kelvin his title; he conducted his pioneering work on thermodynamics and the absolute temperature scale at the nearby university throughout the second half of the 19th century. The park hosted the hugely influential 1888 and 1901 International Exhibitions, which drew millions of visitors and funded both the Art Gallery and the university's expansion.",
         info: {
           openingHours: "Open 24 hours",
           admissionNote: "Free entry",
@@ -119,6 +123,7 @@ export const itinerary = [
         location: "Argyle St, Glasgow G3 8AG",
         locationQuery: "Kelvingrove Art Gallery Museum Glasgow",
         notes: "Right at the edge of the park. Not an Outlander site, but free entry and a beautiful building — worth a quick cultural stop if you have energy. 20–40 mins.",
+        description: "The collection's most controversial acquisition is Salvador Dalí's Christ of Saint John of the Cross, bought by Glasgow Corporation in 1952 for £8,200 — provoking public outrage at the time, but now one of the most visited works in Scotland. The building itself, opened in 1901, is constructed from Dumfriesshire red sandstone; a persistent Glasgow legend holds that the architect built it back-to-front and threw himself from a tower in despair when he realised, though records show he lived to a comfortable old age.",
         info: {
           openingHours: "Mon–Thu & Sat 10am–5pm. Fri & Sun 11am–5pm.",
           admissionNote: "Free entry (permanent collection)",
@@ -131,8 +136,8 @@ export const itinerary = [
         time: "13:00",
         type: "dining",
         name: "Lunch at Sylvan",
-        location: "Sylvan, 1 Ruthven Ln, Glasgow G12 9BG",
-        locationQuery: "Sylvan restaurant Glasgow Ruthven Lane",
+        location: "Sylvan, 20 Woodlands Road, Glasgow G3 6UR",
+        locationQuery: "vegetarian restaurant natural wine Glasgow West End",
         notes: "Tucked away on charming Ruthven Lane in the West End — a lovely spot after the morning walk. Allow around 2 hours for a relaxed lunch.",
         info: {
           openingHours: "Mon–Thu 12pm–9pm. Fri–Sat 12pm–10pm. Closed Sunday.",
@@ -150,6 +155,7 @@ export const itinerary = [
         location: "Cathedral Square, Glasgow G4 0QZ",
         locationQuery: "Glasgow Cathedral",
         notes: "Take a taxi or bus (~10 mins from the West End). Featured as the Paris hospital in Season 2. Dark, dramatic, medieval atmosphere. Allow 20–30 mins.",
+        description: "Glasgow Cathedral is the oldest building in the city and one of the very few medieval cathedrals in Scotland to survive the Reformation intact — largely because Glasgow's tradespeople surrounded it and threatened to fight anyone who tried to demolish it. Built between the 12th and 15th centuries on the site where St Mungo, Glasgow's patron saint, reportedly founded a church in 543 AD, its lower crypt contains his tomb and is considered one of the finest examples of Gothic architecture in Scotland.",
         info: {
           openingHours: "Apr–Sept: Mon–Sat 9:30am–5pm, Sun 1–5pm. Oct–Mar: Mon–Sat 10am–4pm, Sun 1–4pm.",
           admissionNote: "Free entry",
@@ -165,6 +171,7 @@ export const itinerary = [
         location: "Glasgow Necropolis, Castle St, Glasgow G4 0UZ",
         locationQuery: "Glasgow Necropolis",
         notes: "Walk up behind the cathedral. Not in Outlander, but feels like it should be — gothic, eerie, and with incredible views over the city. A hidden gem. 20–30 mins.",
+        description: "Opened in 1833 and modelled on Paris's Père Lachaise cemetery, the Necropolis contains around 50,000 burials and 3,500 monuments crowding a single volcanic hill. The figure dominating the skyline is John Knox, the Protestant reformer whose campaign to strip the Scottish church of Catholic influence in the 1560s set in motion the very religious conflicts that Outlander's Jacobite storylines play out 180 years later. A burial plot here was the ultimate Victorian status symbol — Glasgow's industrial magnates competed to erect the most elaborate monuments to themselves.",
         info: {
           openingHours: "Daily 7am–4:30pm",
           admissionNote: "Free entry",
@@ -180,6 +187,7 @@ export const itinerary = [
         location: "154 Hope St, Glasgow G2 2TH",
         locationQuery: "The Pot Still whisky bar Glasgow",
         notes: "Hundreds of whiskies, proper Scottish pub atmosphere. Feels like somewhere Jamie Fraser would actually sit. The best pick for a full Scottish Outlander evening.",
+        description: "The first written record of Scotch whisky appears in the Scottish Exchequer Rolls of 1494: \"eight bolls of malt to Friar John Cor wherewith to make aqua vitae\" — enough to produce around 1,500 bottles. Whisky was taxed so heavily in the 18th century that around half of Scotland's output was illicit; Highland communities perfected the craft of concealing stills, smuggling barrels past excisemen, and bribing officials — activities that would have been entirely familiar to Jamie Fraser. The Pot Still's 700+ expressions span every Scottish distilling region, from peaty Islay malts to delicate Speysides.",
         info: {
           openingHours: "Mon–Sun 11am–midnight",
           website: "https://thepotstill.co.uk/",
@@ -211,6 +219,7 @@ export const itinerary = [
         location: "Midhope Castle, Abercorn, South Queensferry EH30 9SL",
         locationQuery: "Midhope Castle Lallybroch Outlander",
         notes: "The real-life Lallybroch — Jamie's home. Exterior only, but instantly recognisable. One of the most emotional Outlander stops on the whole trip. Allow 45–60 mins. May require a small entry fee — check opening days before travelling.",
+        description: "Midhope Castle was built in the late 16th century as a tower house — the standard fortified home of the Scottish landed gentry — with a substantial courtyard range added around 1600. It sits within the Hopetoun Estate, which has been owned by the Hope family since 1703, making it one of Scotland's most continuously inhabited aristocratic estates. The castle's interior is now roofless and derelict, which is precisely what gives its exterior such a powerful, weathered quality: the Outlander production team chose it because it required almost no modification to look like a genuinely ancient Fraser stronghold.",
         info: {
           openingHours: "Daily 9am–5pm (last admission 4:30pm). Check website for restricted dates.",
           admissionNote: "Vehicle pass ~£10–15. Pre-booking required.",
@@ -228,6 +237,7 @@ export const itinerary = [
         location: "Blackness Castle, Blackness, Bo'ness EH49 7NH",
         locationQuery: "Blackness Castle Outlander Fort William",
         notes: "Highly recommended bonus stop. Used as Fort William in Outlander — where Jamie was imprisoned. Have your picnic here or at the nearby Hopetoun Estate grounds with coastal views.",
+        description: "Blackness Castle has guarded the Firth of Forth since the 1440s, serving as a royal fortress, state prison, garrison, and ammunition depot across five centuries. Its unusual ship-like shape — with a stone \"prow\" jutting into the firth — earned it the nickname \"the ship that never sailed.\" Mary Queen of Scots imprisoned enemies here; Covenanters were held within its walls during the religious persecutions of the 1680s; and it was one of only four Scottish castles permitted to remain fortified under the terms of the 1707 Act of Union.",
         info: {
           openingHours: "Apr–Sept: Daily 9:30am–5pm. Oct–Mar: Daily 10am–4pm.",
           admissionNote: "Paid entry. HES members free. Advance booking required.",
@@ -290,7 +300,7 @@ export const itinerary = [
         time: "09:00",
         type: "dining",
         name: "Morning pastries at Lannan Bakery",
-        location: "49 Arthur St, Edinburgh EH6 5DG",
+        location: "29 Hamilton Place, Edinburgh EH3 5BA",
         locationQuery: "Lannan Bakery Edinburgh",
         notes: "Go early — expect queues but absolutely worth it. Grab pastries and coffee to set yourself up for the walking route ahead.",
         info: {
@@ -308,6 +318,7 @@ export const itinerary = [
         location: "Royal Mile, Edinburgh EH1 1PB",
         locationQuery: "Royal Mile Edinburgh Old Town",
         notes: "Walk uphill toward the Old Town — this avoids crowds and builds toward the dramatic Old Town naturally. The backbone of 18th-century Edinburgh scenes throughout Outlander. Walk slowly and duck into 1–2 random closes for atmosphere.",
+        description: "The Royal Mile follows the ridge of an ancient volcanic crag, stretching exactly one Scots mile between Edinburgh Castle and Holyroodhouse. In the 18th century — the era of Outlander's Edinburgh episodes — the tenements lining it reached up to 14 storeys, making the Old Town one of the most densely populated urban spaces in the world. The \"closes\" running off both sides were entire communities in themselves, home to merchants, lawyers, surgeons and poets living in extraordinary vertical proximity; the Scottish Enlightenment that produced Hume, Smith and Burns played out in the wynds and taverns you're walking through now.",
       },
       {
         id: "evt-19",
@@ -317,6 +328,7 @@ export const itinerary = [
         location: "Bakehouse Close, 146 Canongate, Edinburgh EH8 8DD",
         locationQuery: "Bakehouse Close Edinburgh Outlander print shop",
         notes: "Turn off the Royal Mile — signposted. Jamie's print shop and one of the most recognisable Outlander scenes. The Season 3 reunion location ❤️. Quiet and atmospheric — great for photos. Allow 10–15 mins.",
+        description: "Bakehouse Close takes its name from a communal bakehouse that served the Canongate community in the 16th century — bread was baked here for residents of the surrounding tenements who had no ovens of their own. The close dates to the 1500s and survives in almost exactly its original form, which is why Outlander's production designers chose it for Jamie's print shop: no set dressing required. Printing was a politically charged trade in 18th-century Edinburgh; pamphlets and broadsheets produced in closes like this one spread Jacobite sentiment, revolutionary ideas, and the works of the Scottish Enlightenment across the city.",
         info: {
           openingHours: "Open 24 hours (public close)",
           admissionNote: "Free, no booking required",
@@ -330,6 +342,7 @@ export const itinerary = [
         location: "Tweeddale Court, 14 High St, Edinburgh EH1 1TE",
         locationQuery: "Tweeddale Court Edinburgh",
         notes: "Just 2 minutes from Bakehouse Close. Another filming location, much less crowded, and feels very 18th century. A hidden gem that most visitors miss.",
+        description: "Tweeddale Court was the site of Edinburgh's last recorded street murder, in December 1806, when a bank messenger named William Begbie was stabbed for a bag of banknotes worth £4,392 — a crime that was never solved despite a £500 reward. The court was later home to Oliver & Boyd, one of Scotland's most important publishing houses, who printed works by Sir Walter Scott and whose offices helped make Edinburgh a centre of the 19th-century literary world. The Scottish Poetry Library now occupies part of the building.",
         info: {
           openingHours: "Open 24 hours (public close)",
           admissionNote: "Free, no booking required",
@@ -343,6 +356,7 @@ export const itinerary = [
         location: "Chambers St, Edinburgh EH1 1JF",
         locationQuery: "National Museum of Scotland Edinburgh",
         notes: "Short detour off the Royal Mile. Excellent Jacobite exhibitions covering Bonnie Prince Charlie, the 1745 uprising, and Highland culture — the perfect context for everything you've seen in Outlander. Allow 60–90 mins.",
+        description: "The museum's Jacobite collection is among the finest in existence: Bonnie Prince Charlie's travelling canteen, his portable altar, the silver-mounted punch bowl used at the victory celebration after Prestonpans, and personal effects carried during his months as a fugitive after Culloden in 1746. The collection also holds a fragment of the 1320 Declaration of Arbroath — Scotland's foundational assertion of independence — and Dolly the sheep, the world's first cloned mammal, born at the Roslin Institute near Edinburgh in 1996.",
         info: {
           openingHours: "Daily 10am–5pm. Closed 25 Dec.",
           admissionNote: "Free entry (permanent collection). Some temporary exhibitions ticketed.",
@@ -375,6 +389,7 @@ export const itinerary = [
         location: "Canongate, Edinburgh EH8 8DX",
         locationQuery: "Palace of Holyroodhouse Edinburgh",
         notes: "Bonnie Prince Charlie held court here during the 1745 uprising — a direct Jacobite link to the Outlander storyline. Walk downhill from the Royal Mile to get here. Interior visit optional (30–60 mins).",
+        description: "The palace grew from an Augustinian abbey founded by King David I in 1128, who according to legend was saved from a charging stag by a miraculous vision of a holy cross — hence \"Holyrood.\" Mary Queen of Scots held court here from 1561, and it was within these walls in March 1566 that her secretary David Rizzio was dragged from her presence and stabbed 56 times — allegedly on the orders of her jealous husband Lord Darnley. Bonnie Prince Charlie held his last triumphant ball here in September 1745, dancing reels in the Long Gallery just weeks before the Jacobite campaign began its fatal unravelling at Falkirk and Culloden.",
         info: {
           openingHours: "2 Apr–11 May: Thu–Mon 9:30am–6pm. From 21 May: Daily 9:30am–6pm. Check website for closures.",
           admissionNote: "Adult £22 (advance) / £26 (on the day). Under 5s free. Advance tickets convert to a 1-year pass.",
@@ -392,6 +407,7 @@ export const itinerary = [
         location: "Holyrood Park, Edinburgh EH8 8HG",
         locationQuery: "Holyrood Park Arthur's Seat Edinburgh",
         notes: "Just a 2-minute walk from the palace. Take the Queen's Drive loop past St Margaret's Loch and Salisbury Crags for a relaxed scenic walk (1–1.5 hrs). Hike up Arthur's Seat if energy allows — gives you that wild Highland atmosphere without leaving the city.",
+        description: "Arthur's Seat is the remnant of a volcano that last erupted around 350 million years ago — the same geological processes that shaped the Scottish Highlands Jamie Fraser rode through. At 251 metres it offers what many consider the finest urban panorama in Britain. In 1836, a group of boys found 17 tiny coffins concealed in a cave on the hillside, each containing a miniature wooden figure dressed in cloth; their origin and purpose remain unexplained, though theories connect them to the Burke and Hare murders of 1828. The Radical Road skirting Salisbury Crags below was built in 1820 to give work to unemployed weavers radicalised by post-Napoleonic economic collapse.",
         info: {
           openingHours: "Open 24 hours, year-round",
           admissionNote: "Free entry. Weekend road closures within park: Sat–Sun 8:15am–3:45pm.",
