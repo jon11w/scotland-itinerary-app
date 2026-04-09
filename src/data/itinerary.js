@@ -301,7 +301,7 @@ export const itinerary = [
     events: [
       {
         id: "evt-17",
-        time: "09:00",
+        time: "10:15",
         type: "dining",
         name: "Morning pastries at Lannan Bakery",
         location: "29 Hamilton Place, Edinburgh EH3 5BA",
@@ -317,7 +317,7 @@ export const itinerary = [
       },
       {
         id: "evt-18",
-        time: "10:00",
+        time: "10:30",
         type: "sightseeing",
         name: "Royal Mile — 18th-century Edinburgh in Outlander",
         location: "Royal Mile, Edinburgh EH1 1PB",
@@ -327,7 +327,7 @@ export const itinerary = [
       },
       {
         id: "evt-19",
-        time: "10:30",
+        time: "11:00",
         type: "sightseeing",
         name: "Bakehouse Close — Jamie's Print Shop",
         location: "Bakehouse Close, 146 Canongate, Edinburgh EH8 8DD",
@@ -341,7 +341,7 @@ export const itinerary = [
       },
       {
         id: "evt-20",
-        time: "10:50",
+        time: "11:10",
         type: "sightseeing",
         name: "Tweeddale Court — hidden Outlander filming location",
         location: "Tweeddale Court, 14 High St, Edinburgh EH1 1TE",
