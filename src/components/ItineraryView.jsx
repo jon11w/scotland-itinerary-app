@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { itinerary, TRIP_CONFIG } from '../data/itinerary';
-import DaySection from './DaySection';
+import SummaryView from './SummaryView';
+import DayView from './DayView';
 
 function loadCompleted() {
   try {
@@ -10,16 +11,9 @@ function loadCompleted() {
 }
 
 export default function ItineraryView({ onLogout }) {
-  const [completed, setCompleted] = useState(loadCompleted);
-  const [activeDay, setActiveDay] = useState(() => {
-    const c = loadCompleted();
-    const firstIncomplete = itinerary.find(day => day.events.some(e => !c.has(e.id)));
-    return (firstIncomplete ?? itinerary[0])?.id || null;
-  });
-
-  const toggleDay = (dayId) => {
-    setActiveDay(prev => prev === dayId ? null : dayId);
-  };
+  const [completed, setCompleted]           = useState(loadCompleted);
+  const [view, setView]                     = useState('summary');
+  const [selectedDayIndex, setSelectedDayIndex] = useState(null);
 
   const toggleComplete = (eventId) => {
     setCompleted(prev => {
@@ -30,16 +24,30 @@ export default function ItineraryView({ onLogout }) {
     });
   };
 
+  const handleSelectDay = (index) => {
+    setSelectedDayIndex(index);
+    setView('day');
+  };
+
+  const handleBack = () => {
+    setView('summary');
+    setSelectedDayIndex(null);
+  };
+
+  const handlePrevDay = () => setSelectedDayIndex(i => Math.max(0, i - 1));
+  const handleNextDay = () => setSelectedDayIndex(i => Math.min(itinerary.length - 1, i + 1));
+
   const totalStops = itinerary.reduce((sum, day) => sum + day.events.length, 0);
+  const selectedDay = selectedDayIndex !== null ? itinerary[selectedDayIndex] : null;
 
   return (
     <div style={s.page}>
 
-      {/* Sticky header — glassmorphism with tartan accent */}
+      {/* Sticky header */}
       <header style={s.header}>
         <div style={s.headerBg} />
         <div style={s.headerInner}>
-          <div>
+          <div style={{ minWidth: 0 }}>
             <p style={s.eyebrow}>✦ Your itinerary</p>
             <h1 style={s.title}>{TRIP_CONFIG.title}</h1>
           </div>
@@ -52,29 +60,36 @@ export default function ItineraryView({ onLogout }) {
           <span style={s.summaryDot}>·</span>
           <span style={s.summaryDest}>{TRIP_CONFIG.destination}</span>
         </div>
-        {/* Tartan accent stripe at bottom of header */}
         <div style={s.tartanStripe} />
       </header>
 
       <main style={s.main}>
-        <div style={s.dayList}>
-          {itinerary.map(day => (
-            <DaySection
-              key={day.id}
-              day={day}
-              isActive={activeDay === day.id}
-              onClick={() => toggleDay(day.id)}
-              completedEvents={completed}
-              onToggleComplete={toggleComplete}
-            />
-          ))}
-        </div>
+        {view === 'summary' && (
+          <SummaryView
+            days={itinerary}
+            completedEvents={completed}
+            onSelectDay={handleSelectDay}
+          />
+        )}
+        {view === 'day' && selectedDay && (
+          <DayView
+            day={selectedDay}
+            dayIndex={selectedDayIndex}
+            totalDays={itinerary.length}
+            completedEvents={completed}
+            onToggleComplete={toggleComplete}
+            onBack={handleBack}
+            onPrev={handlePrevDay}
+            onNext={handleNextDay}
+          />
+        )}
       </main>
 
-      <footer style={s.footer}>
-        <p style={s.footerText}>Tap any location to open in Google Maps</p>
-        <p style={s.footerText}>Sarah smells</p>
-      </footer>
+      {view === 'summary' && (
+        <footer style={s.footer}>
+          <p style={s.footerText}>Tap a day to view your itinerary</p>
+        </footer>
+      )}
     </div>
   );
 }
@@ -180,17 +195,8 @@ const s = {
   },
   main: {
     flex: 1,
-    padding: '24px 16px 16px',
     minWidth: 0,
     width: '100%',
-  },
-  dayList: {
-    display: 'flex',
-    flexDirection: 'column',
-    gap: 14,
-    maxWidth: 640,
-    width: '100%',
-    margin: '0 auto',
   },
   footer: {
     padding: '16px 16px 36px',
