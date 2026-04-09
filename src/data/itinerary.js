@@ -35,6 +35,7 @@ export const itinerary = [
         name: "Check in at Native Glasgow",
         location: "Native Glasgow, 14 St Vincent Place, Glasgow G1 2DH",
         locationQuery: "Native Glasgow hotel St Vincent Place",
+        customImage: "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=800&q=80",
         notes: "Central and stylish — great base for the evening. Drop bags and freshen up.",
         info: {
           openingHours: "24-hour reception",
@@ -138,6 +139,7 @@ export const itinerary = [
         name: "Lunch at Sylvan",
         location: "Sylvan, 20 Woodlands Road, Glasgow G3 6UR",
         locationQuery: "vegetarian restaurant natural wine Glasgow West End",
+        customImage: "https://images.unsplash.com/photo-1600093463592-8e36ae95ef56?w=800&q=80",
         notes: "Tucked away on charming Ruthven Lane in the West End — a lovely spot after the morning walk. Allow around 2 hours for a relaxed lunch.",
         info: {
           openingHours: "Mon–Thu 12pm–9pm. Fri–Sat 12pm–10pm. Closed Sunday.",
@@ -236,6 +238,7 @@ export const itinerary = [
         name: "Blackness Castle — Fort William in Outlander",
         location: "Blackness Castle, Blackness, Bo'ness EH49 7NH",
         locationQuery: "Blackness Castle Outlander Fort William",
+        customImage: "https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=800&q=80",
         notes: "Highly recommended bonus stop. Used as Fort William in Outlander — where Jamie was imprisoned. Have your picnic here or at the nearby Hopetoun Estate grounds with coastal views.",
         description: "Blackness Castle has guarded the Firth of Forth since the 1440s, serving as a royal fortress, state prison, garrison, and ammunition depot across five centuries. Its unusual ship-like shape — with a stone \"prow\" jutting into the firth — earned it the nickname \"the ship that never sailed.\" Mary Queen of Scots imprisoned enemies here; Covenanters were held within its walls during the religious persecutions of the 1680s; and it was one of only four Scottish castles permitted to remain fortified under the terms of the 1707 Act of Union.",
         info: {
@@ -278,6 +281,7 @@ export const itinerary = [
         name: "Cocktails at Panda & Sons",
         location: "79 Queen St, Edinburgh EH2 4NF",
         locationQuery: "Panda and Sons speakeasy Edinburgh",
+        customImage: "https://images.unsplash.com/photo-1470337458703-46ad1756a187?w=800&q=80",
         notes: "Hidden speakeasy bar — you'll love this. Book ahead, it fills up. Follow with The Jazz Bar for live music to keep the vibe going without things getting too chaotic.",
         info: {
           openingHours: "Mon 4pm–12:30am. Tue–Fri 4pm–1am. Sat 3pm–1am. Sun 3pm–12:30am.",
@@ -302,6 +306,7 @@ export const itinerary = [
         name: "Morning pastries at Lannan Bakery",
         location: "29 Hamilton Place, Edinburgh EH3 5BA",
         locationQuery: "Lannan Bakery Edinburgh",
+        customImage: "https://images.unsplash.com/photo-1555507036-ab1f4038808a?w=800&q=80",
         notes: "Go early — expect queues but absolutely worth it. Grab pastries and coffee to set yourself up for the walking route ahead.",
         info: {
           openingHours: "Thu–Sun from 8am (until sold out, usually by early afternoon)",
@@ -341,6 +346,7 @@ export const itinerary = [
         name: "Tweeddale Court — hidden Outlander filming location",
         location: "Tweeddale Court, 14 High St, Edinburgh EH1 1TE",
         locationQuery: "Tweeddale Court Edinburgh",
+        customImage: "https://images.unsplash.com/photo-1604580864964-0462f5d5b1a8?w=800&q=80",
         notes: "Just 2 minutes from Bakehouse Close. Another filming location, much less crowded, and feels very 18th century. A hidden gem that most visitors miss.",
         description: "Tweeddale Court was the site of Edinburgh's last recorded street murder, in December 1806, when a bank messenger named William Begbie was stabbed for a bag of banknotes worth £4,392 — a crime that was never solved despite a £500 reward. The court was later home to Oliver & Boyd, one of Scotland's most important publishing houses, who printed works by Sir Walter Scott and whose offices helped make Edinburgh a centre of the 19th-century literary world. The Scottish Poetry Library now occupies part of the building.",
         info: {
@@ -371,6 +377,7 @@ export const itinerary = [
         name: "Lunch at The Palmerston",
         location: "1 Palmerston Pl, Edinburgh EH12 5AF",
         locationQuery: "The Palmerston Edinburgh",
+        customImage: "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=800&q=80",
         notes: "One of the best lunches in the city right now. Head here after the museum.",
         info: {
           openingHours: "Tue–Sat 9am–2:30pm & 6–9:45pm. Sun 9am–3:30pm. Closed Monday.",

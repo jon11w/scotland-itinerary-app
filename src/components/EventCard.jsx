@@ -42,9 +42,14 @@ export default function EventCard({ event, isCompleted, onToggleComplete }) {
 
   useEffect(() => {
     if (expanded && !loaded) {
-      setLoading(true); setLoaded(true);
-      fetchUnsplashImage(event.locationQuery || event.name)
-        .then(img => { setImage(img); setLoading(false); });
+      setLoaded(true);
+      if (event.customImage) {
+        setImage({ url: event.customImage, credit: null, creditLink: null });
+      } else {
+        setLoading(true);
+        fetchUnsplashImage(event.locationQuery || event.name)
+          .then(img => { setImage(img); setLoading(false); });
+      }
     }
   }, [expanded, loaded, event]);
 
